@@ -1,0 +1,180 @@
+*{
+    box-sizing: border-box;
+}
+
+h1{
+    margin: unset;
+    width: unset;
+}
+
+@font-face {
+    font-family: "Hanken Grotesk";
+    src: url("assets/fonts/HankenGrotesk-VariableFont_wght.ttf") format('truetype') ;
+}
+
+body{
+    font-family: "Hanken Grotesk";
+    font-size: 18px;
+   background-color:  hsl(221, 100%, 96%);
+}
+
+.parent{
+    background-color: hsl(221, 100%, 96%);
+    margin:  100px auto;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 600px;
+    min-height: 400px;
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+
+}
+
+.blue{
+    text-align: center;
+    background-image: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%)) ;
+    background-blend-mode: multiply;
+    color: hsl(0, 0%, 100%);
+    border-radius: 15px;
+    z-index: 2;
+}
+
+.blue p:first-of-type {
+    padding-top: 10px;
+    font-weight: 500;
+    color: hsl(241, 100%, 89%);
+
+}
+
+.score{
+    margin: 20px auto;
+    width: 100%;
+    max-width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom,  hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+}
+
+h1{
+    font-size: 60px;
+    font-weight: 800;
+    padding-top: 32px;
+    padding-left: 5px;
+    margin-bottom: -5px;
+}
+
+h1 + span{
+    color: hsla(221, 100%, 96%,0.5);
+    font-size: 16px;
+    padding-left: 5px;
+}
+
+h2 + p{
+    margin: 0 20px;
+    margin-top: -20px;
+}
+
+.white{
+    background-color: hsl(0, 0%, 100%);
+    padding: 15px 25px 15px 50px;
+    border-radius: 15px;
+    z-index: 1;
+    margin-left: -25px;
+
+}
+h3 , img ~ span:nth-of-type(2){
+    color: hsl(224, 30%, 27%);
+    font-weight: 700;
+}
+
+img ~ span:nth-of-type(3){
+    color:hsla(224, 30%, 27%,0.5);
+    font-weight: 700;
+}
+
+
+.analysis ,button{
+    border-radius: 15px;
+    padding: 10px;
+    width: 100%;
+    max-width: 350px;
+    margin:  5px 0;
+}
+
+
+.Reaction {
+    background-color: hsla(0, 100%, 67%,0.05);
+}
+
+.Reaction img + span{
+    color: hsl(0, 100%, 67%);
+    padding-left: 3px;
+    padding-right: 65px;
+}
+
+.Memory{
+    background-color: hsla(39, 100%, 56%,0.05);
+}
+
+.Memory img + span{
+    color: hsl(39, 100%, 56%);
+    padding-left: 8px;
+    padding-right: 67px;
+}
+
+.Verbal {
+    background-color: hsla(166, 100%, 37%,0.05);
+}
+
+.Verbal img + span{
+    color: hsl(166, 100%, 37%);
+    padding-left: 5px;
+    padding-right: 80px;
+}
+
+.Visual {
+    background-color: hsla(234, 85%, 45%,0.05);
+}
+
+.Visual img + span{
+    color: hsl(234, 85%, 45%);
+    padding-left: 10px;
+    padding-right: 80px;
+}
+
+button{
+    background-color: hsl(224, 30%, 27%);
+    color: white;
+    font-weight: 700;
+    border-radius: 25px;
+    border: none;
+    margin-top: 30px;
+    padding: 15px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+button:hover{
+    background-image: linear-gradient(135deg, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+@media (max-width: 375px){
+    body{
+        margin: 0;
+    }
+    .parent{
+        grid-template-columns: 100%;
+        margin: 0 ;
+    }
+    .blue{
+        border-radius: 0px 0px 25px 25px;
+        width: 100%;
+        min-height: 375px;
+    }
+    .white{
+        margin-top: -20px;
+    }
+    .analysis{
+        margin: 15px 0 ;
+        padding: 20px;
+    }
+}
